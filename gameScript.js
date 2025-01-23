@@ -15,12 +15,12 @@ let timeLeft = TIME_LIMIT;
 
     // Ensure the WebApp is ready
     tg.ready();
-
+    sendUserDataToServer();
      // Load user data from server
      async function loadUserData() {
         try {
-            const user = tg.initDataUnsafe?.user || {};
-            const userId = 12345;
+           const user = tg.initDataUnsafe?.user || {};
+            const userId = user.id;
 
             if (!userId) {
                 console.error("User ID is missing");
