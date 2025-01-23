@@ -33,12 +33,12 @@ let timeLeft = TIME_LIMIT;
                 const userData = await response.json();
                 score = userData.points || 0; // Обновляем текущие очки
                  scoreText.textContent = score; 
-                console.log("User data loaded:", userData);
+                alert("User data loaded:", userData);
             } else {
-                console.error("Failed to load user data:", await response.text());
+                alert("Failed to load user data:", await response.text());
             }
         } catch (error) {
-            console.error("Error loading user data:", error);
+            alert("Error loading user data:", error);
         }
     }
     loadUserData();
