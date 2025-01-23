@@ -23,7 +23,7 @@ let timeLeft = TIME_LIMIT;
            const user = tg.initDataUnsafe?.user || {};
             const userId = user.id;
 
-            const response = await fetch(`https://servertg.onrender.com/api/getUserData?userId=12345`, {
+            const response = await fetch(`https://servertg.onrender.com/api/getUserData?userId=${userId}`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",
