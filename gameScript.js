@@ -27,7 +27,7 @@ let timeLeft = TIME_LIMIT;
                 return;
             }
 
-            const response = await fetch(`https://servertg.onrender.com/api/getUserData?userId=${userId}`, {
+            const response = await fetch(`https://servertg.onrender.com/api/getUserData?userId=12345`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",
