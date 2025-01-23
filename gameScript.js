@@ -20,7 +20,7 @@ let timeLeft = TIME_LIMIT;
      async function loadUserData() {
         try {
             const user = tg.initDataUnsafe?.user || {};
-            const userId = user.id;
+            const userId = 12345;
 
             if (!userId) {
                 console.error("User ID is missing");
