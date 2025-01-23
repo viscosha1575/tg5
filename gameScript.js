@@ -16,7 +16,6 @@ let timeLeft = TIME_LIMIT;
 
     // Ensure the WebApp is ready
     tg.ready();
-    sendUserDataToServer();
      // Load user data from server
      async function loadUserData() {
         try {
