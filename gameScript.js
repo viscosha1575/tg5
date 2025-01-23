@@ -23,11 +23,6 @@ let timeLeft = TIME_LIMIT;
            const user = tg.initDataUnsafe?.user || {};
             const userId = user.id;
 
-            if (!userId) {
-                console.error("User ID is missing");
-                return;
-            }
-
             const response = await fetch(`https://servertg.onrender.com/api/getUserData?userId=12345`, {
                 method: "GET",
                 headers: {
