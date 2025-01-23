@@ -31,7 +31,7 @@ let timeLeft = TIME_LIMIT;
 
             if (response.ok) {
                 const userData = await response.json();
-                score = userData.points || 0; // Обновляем текущие очки
+                score = userData.points; // Обновляем текущие очки
                  scoreText.textContent = score; 
                 alert("User data loaded:", userData);
             } else {
