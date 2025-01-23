@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const scoreDisplay = document.getElementById("score");
     const timerText = document.getElementById("timer-text");
     const progressCircle = document.querySelector(".circle-progress");
+    const scoreText = document.getElementById("button-text");
     const FULL_DASH_ARRAY = 2 * Math.PI * 30; // Длина окружности
 const TIME_LIMIT = 60; // Время таймера (в секундах)
 let timeLeft = TIME_LIMIT;
@@ -37,7 +38,7 @@ let timeLeft = TIME_LIMIT;
             if (response.ok) {
                 const userData = await response.json();
                 score = userData.points || 0; // Обновляем текущие очки
-                scoreDisplay.textContent = score; // Отображаем очки на кастомной кнопке
+                 scoreText.textContent = score; 
                 console.log("User data loaded:", userData);
             } else {
                 console.error("Failed to load user data:", await response.text());
