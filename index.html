@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pocoverse</title>
+    <link rel="stylesheet" href="gameStyle.css">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+    <div class="game-container">       
+        <div class="timer-container">
+            <svg class="timer-svg" width="75" height="75" viewBox="0 0 75 75">
+                <circle class="circle-bg" cx="37.5" cy="37.5" r="30"></circle>
+                <circle class="circle-progress" cx="37.5" cy="37.5" r="30"></circle>
+            </svg>
+            <div class="timer-text" id="timer-text">60</div>
+        </div>
+        
+        
+        <!-- Кнопка в правом верхнем углу -->
+        <div class="closeButton">
+            <img class="closebutton-icon" src="close.png" alt="Star">
+        </div>
+        <div class="custom-button">
+            <img class="button-icon" src="star.png" alt="Star">
+            <span class="button-text">602</span>
+        </div>
+        <div class="custom-button2">
+            <img class="button-icon" src="music.png" alt="Star">
+            <img class="button-icon" src="music.png" alt="Star">
+            <img class="button-icon" src="music.png" alt="Star">
+            
+        </div>
+    
+        <div class="grid" id="grid">
+            <!-- Items will be generated dynamically -->
+        </div>
+    </div>
+    <script src="gameScript.js" defer></script>
+</body>
+</html>

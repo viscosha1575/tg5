@@ -1,0 +1,168 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: gray;
+    display: flex; /* Используем flexbox для центрирования */
+    justify-content: center; /* Центрирование по горизонтали */
+    align-items: center; /* Центрирование по вертикали */
+    height: 100vh; /* Высота экрана */
+    overflow: hidden; /* Запрет прокрутки страницы */
+}
+
+
+.game-container {
+    display: flex;
+    flex-direction: column; /* Изменяем направление на вертикальное */
+    align-items: center; /* Центрирование элементов по горизонтали */
+    justify-content: flex-start; /* Таймер сверху */
+    overflow: hidden;
+    position: relative;
+}
+/* Добавляем стили для кнопки */
+.custom-button {
+    position: absolute; /* Абсолютное позиционирование */
+    top: 10px; /* Расстояние от верхнего края */
+    right: 10px; /* Расстояние от правого края */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff; /* Белый фон */
+    border-radius: 20px; /* Закругленные края */
+    padding: 5px 15px;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    color: #4a4a4a; /* Цвет текста */
+}
+/* Добавляем стили для кнопки */
+.custom-button2 {
+    position: absolute; /* Абсолютное позиционирование */
+    top: 10px; /* Расстояние от верхнего края */
+    right: 95px; /* Расстояние от правого края */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff; /* Белый фон */
+    border-radius: 20px; /* Закругленные края */
+    padding: 5px 15px;
+    font-family: Arial, sans-serif;
+    color: #4a4a4a; /* Цвет текста */
+}
+
+.closeButton {
+    position: absolute;
+    right: 245px;
+    top: 15px; /* Расстояние от верхнего края */
+    align-items: center;
+  }
+.closebutton-icon {
+    width: 19px;
+    height: 19px;
+    margin-right: 5px; /* Отступ между иконкой и текстом */
+}
+.button-text {
+    top: 50%;
+    left: 50%;
+    transform: translate(-10%, -10%);
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 15px;
+    margin-right: 5px; /* Отступ между текстом и иконкой */
+}
+
+.button-icon {
+    width: 15px;
+    height: 15px;
+    margin-right: 5px; /* Отступ между иконкой и текстом */
+}
+
+.timer-container {
+    position: relative;
+    margin-top: 60px;
+    margin-bottom: 10px;
+    width: 50px; /* Уменьшенный размер */
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.timer-svg {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    transform: rotate(-90deg); 
+}
+
+.circle-bg {
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.2); /* Фоновая окружность (светлый цвет) */
+    stroke-width: 2.5;
+}
+
+.circle-progress {
+    fill: none;
+    stroke: rgb(255, 255, 255); /* Цвет прогресса */
+    stroke-width: 5;
+    stroke-linecap: round;
+    stroke-dasharray: 188.5; /* Длина окружности (2πr, где r=30) */
+    stroke-dashoffset: 0; /* Начинается с полного круга */
+    transition: stroke-dashoffset 0.5s linear; /* Плавное изменение */
+}
+
+
+.timer-text {
+    position: absolute;
+    font-size:0.9rem;/* Размер текста */
+    font-weight: bold;
+    color: white;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 100px); /* Три столбца */
+    gap: 2px; /* Расстояние между элементами */
+    width: auto; /* Ширина сетки зависит от контента */
+    height: auto; /* Высота сетки зависит от контента */
+    margin-top: 5px; /* Отступ между таймером и сеткой */
+}
+
+.grid-item {
+    margin-left: 15px;
+    width: 90%; /* Автоматическое растяжение внутри колонки */
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.grid-item img {
+    width: 80%; /* Уменьшение размера изображения */
+    height: auto; /* Сохраняет пропорции */
+    object-fit: contain; /* Подгоняет изображение без обрезки */
+    
+}
+
+
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+    .grid {
+        gap: 2px; /* Уменьшение расстояния еще больше */
+    }
+
+    .grid-item img {
+        width: 70%; /* Ещё меньшее изображение для мобильных */
+    }
+}
+
+@media (max-width: 480px) {
+    .grid {
+        gap: 5px; /* Минимальное расстояние между элементами */
+    }
+
+    .grid-item img {
+        width: 80%; /* Подгоняем под маленькие экраны */
+    }
+}
