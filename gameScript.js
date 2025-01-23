@@ -10,8 +10,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const FULL_DASH_ARRAY = 2 * Math.PI * 30; // Длина окружности
 const TIME_LIMIT = 60; // Время таймера (в секундах)
 let timeLeft = TIME_LIMIT;
-    let score = 0;
-    let totalScore=0;
+    let score;
+    let totalScore;
     const backImage = "./src/back.png";
     const frontImage = "./src/front.png";
 
@@ -32,8 +32,9 @@ let timeLeft = TIME_LIMIT;
 
             if (response.ok) {
                 const userData = await response.json();
-                score = userData.points; // Обновляем текущие очки
-                 scoreText.textContent = score; 
+                
+                totalScore = userData.points;
+             scoreText.textContent = totalScore; 
                 alert("User data loaded:", userData);
             } else {
                 alert("Failed to load user data:", await response.text());
