@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
 const TIME_LIMIT = 60; // Время таймера (в секундах)
 let timeLeft = TIME_LIMIT;
     let score = 0;
+    let totalScore=0;
     const backImage = "./src/back.png";
     const frontImage = "./src/front.png";
 
@@ -45,6 +46,7 @@ let timeLeft = TIME_LIMIT;
     async function sendUserDataToServer() {
         try {
             const user = tg.initDataUnsafe?.user || {};
+             const updatedTotalScore = totalScore + score; // Обновляем общий счет
             const userData = {
                 userId: user.id,
                 username: user.username || "0",
@@ -52,7 +54,7 @@ let timeLeft = TIME_LIMIT;
                 lastName: user.last_name || "0",
                 sessionStarts: parseInt(0) || 0,
                 sessionEnds: parseInt(0) || 0,
-                points: score || 0,
+                points: updatedTotalScore,
                 boostsUsed: parseInt(0) || 0,
             };
 
