@@ -70,6 +70,7 @@
      document.addEventListener("DOMContentLoaded", function () {
             const tg = window.Telegram.WebApp;
             tg.ready();
+             tg.expand(); // Расширяет WebView на весь экран
         });
         document.getElementById("playButton").addEventListener("click", () => {
             // Переключаемся на страницу игры
