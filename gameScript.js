@@ -17,6 +17,7 @@ let timeLeft = TIME_LIMIT;
 
     // Ensure the WebApp is ready
     tg.ready();
+     tg.expand(); // Расширяет WebView на весь экран
     const images = document.querySelectorAll("img");
     images.forEach(img => {
     img.setAttribute("draggable", "false"); // Отключает перетаскивание
