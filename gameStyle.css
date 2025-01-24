@@ -140,7 +140,6 @@ body {
 }
 
 .grid-item {
-    margin-left: 15px;
     width: 100%; /* Автоматическое растяжение внутри колонки */
     background: transparent;
     display: flex;
@@ -150,7 +149,7 @@ body {
 }
 
 .grid-item img {
-    width: 80%; /* Уменьшение размера изображения */
+    width: 100%; /* Уменьшение размера изображения */
     height: auto; /* Сохраняет пропорции */
     object-fit: contain; /* Подгоняет изображение без обрезки */
     
