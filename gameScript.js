@@ -54,7 +54,7 @@ let timeLeft = TIME_LIMIT;
                 lastName: user.last_name || "0",
                 sessionStarts: parseInt(0) || 0,
                 sessionEnds: parseInt(0) || 0,
-                points: updatedTotalScore,
+                points: totalScore,
                 boostsUsed: parseInt(0) || 0,
             };
 
@@ -141,6 +141,7 @@ let timeLeft = TIME_LIMIT;
 
     function endGame() {
         alert(`Game Over! Your score is ${score}`);
+        totalScore += score; // Добавляем текущий счёт к общему счёту
         sendUserDataToServer();
     }
 
