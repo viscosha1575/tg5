@@ -1,11 +1,11 @@
 * {
-    user-select: none; /* Запрещает выделение текста и элементов */
-    -webkit-user-drag: none; /* Запрещает перетаскивание изображений в Safari/Chrome */
     -webkit-touch-callout: none; /* Отключает вызов контекстного меню на iOS */
+    -webkit-user-drag: none;    /* Запрещает перетаскивание изображений */
+    user-select: none;          /* Запрещает выделение текста */
 }
 
 img {
-    pointer-events: none; /* Запрещает взаимодействие с изображениями */
+    pointer-events: none;       /* Отключает взаимодействие с изображениями */
 }
 
 body {
