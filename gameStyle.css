@@ -161,6 +161,12 @@ body {
      -webkit-tap-highlight-color: transparent; /* Убирает подсветку на iOS и Android */
 }
 
+.grid-item img:focus,
+.grid-item img:active {
+    outline: none; /* Убирает фокус */
+    background: transparent; /* Убирает фон */
+    box-shadow: none; /* Убирает тень */
+}
 
 
 /* Адаптация для мобильных устройств */
@@ -181,5 +187,10 @@ body {
 
     .grid-item img {
         width: 80%; /* Подгоняем под маленькие экраны */
+    }
+}
+@media (hover: none) {
+    .grid-item img:hover {
+        background: none; /* Убирает фон при наведении */
     }
 }
