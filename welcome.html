@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Welcome</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: gray; /* Фон такой же, как в игре */
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .welcome-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .welcome-title {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .play-button {
+            background-color: white; /* Цвет кнопки */
+            color: gray; /* Цвет текста кнопки */
+            border: none;
+            border-radius: 20px;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .play-button:hover {
+            background-color: lightgray; /* Цвет при наведении */
+            color: black;
+        }
+
+        @media (max-width: 768px) {
+            .welcome-title {
+                font-size: 1.5rem;
+            }
+
+            .play-button {
+                font-size: 1rem;
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="welcome-container">
+        <h1 class="welcome-title">Добро пожаловать в игру!</h1>
+        <button class="play-button" id="playButton">Играть</button>
+    </div>
+    <script>
+        document.getElementById("playButton").addEventListener("click", () => {
+            // Переключаемся на страницу игры
+            window.location.href = "./game.html"; // Замените "game.html" на путь к странице с игрой
+        });
+    </script>
+</body>
+</html>
