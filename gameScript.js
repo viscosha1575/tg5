@@ -17,6 +17,11 @@ let timeLeft = TIME_LIMIT;
 
     // Ensure the WebApp is ready
     tg.ready();
+    const images = document.querySelectorAll("img");
+    images.forEach(img => {
+    img.setAttribute("draggable", "false"); // Отключает перетаскивание
+    img.addEventListener("contextmenu", (e) => e.preventDefault()); // Отключает контекстное меню
+    });
      // Load user data from server
      async function loadUserData() {
         try {
