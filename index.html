@@ -67,6 +67,10 @@
         <button class="play-button" id="playButton">Играть</button>
     </div>
     <script>
+     document.addEventListener("DOMContentLoaded", function () {
+            const tg = window.Telegram.WebApp;
+            tg.ready();
+        });
         document.getElementById("playButton").addEventListener("click", () => {
             // Переключаемся на страницу игры
             window.location.href = "./game.html"; // Замените "game.html" на путь к странице с игрой
