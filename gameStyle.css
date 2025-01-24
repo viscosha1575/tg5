@@ -1,3 +1,13 @@
+* {
+    user-select: none; /* Запрещает выделение текста и элементов */
+    -webkit-user-drag: none; /* Запрещает перетаскивание изображений в Safari/Chrome */
+    -webkit-touch-callout: none; /* Отключает вызов контекстного меню на iOS */
+}
+
+img {
+    pointer-events: none; /* Запрещает взаимодействие с изображениями */
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
