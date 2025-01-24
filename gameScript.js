@@ -43,7 +43,6 @@ let timeLeft = TIME_LIMIT;
             alert("Error loading user data:", error);
         }
     }
-    loadUserData();
     async function sendUserDataToServer() {
         try {
             const user = tg.initDataUnsafe?.user || {};
@@ -81,6 +80,7 @@ let timeLeft = TIME_LIMIT;
     }
 
     function startGame() {
+        loadUserData();
         generateGrid();
         startTimer();
     }
