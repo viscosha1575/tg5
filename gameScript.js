@@ -10,8 +10,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const FULL_DASH_ARRAY = 2 * Math.PI * 30; // Длина окружности
 const TIME_LIMIT = 60; // Время таймера (в секундах)
 let timeLeft = TIME_LIMIT;
-    let score;
-    let totalScore;
+    let score=0;
+    let totalScore=0;
     const backImage = "./src/back.png";
     const frontImage = "./src/front.png";
 
