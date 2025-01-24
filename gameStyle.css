@@ -28,6 +28,8 @@ body {
     justify-content: flex-start; /* Таймер сверху */
     overflow: hidden;
     position: relative;
+    height: 100%; /* Контейнер занимает всю высоту экрана */
+    width: 100%; /* Контейнер занимает всю ширину экрана */
 }
 /* Добавляем стили для кнопки */
 .custom-button {
